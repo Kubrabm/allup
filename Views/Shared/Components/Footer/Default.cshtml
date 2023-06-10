@@ -1,0 +1,124 @@
+﻿@using Allup.DAL.Entities;
+@model Footer
+
+
+<!--====== Newsletter Part Start ======-->
+@foreach (var item in Model.NewLetters)
+{
+    <section class="newsletter-area pt-100 pb-100 bg_cover" style="background-image: url(./@item.BgImgUrl)">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-8">
+                    <div class="newsletter-content">
+                        <h2 class="newsletter-title">@item.Title</h2>
+                        <p>@item.Description</p>
+
+                        <div class="newsletter-forn">
+                            <form action="#">
+                                <input type="text" placeholder="Your Email address">
+                                <button class="main-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div> <!-- newsletter content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+}
+
+
+<!--====== Newsletter Part Ends ======-->
+<!--====== Footer Part Start ======-->
+
+<section class="footer-area bg_cover" style="background-image: url(./@Model.BgImageUrl)">
+    <div class="footer-widget pt-30 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-contact mt-50">
+                        <h4 class="footer-title">Contact Details</h4>
+
+                        @foreach (var item in Model.ContactDetails)
+                        {
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> @item.Address</li>
+                                <li><i class="fas fa-phone"></i> <a href="tell:@item.Phone">@item.Phone</a></li>
+                                <li><i class="fas fa-envelope"></i><a href="mailto://@item.Email">@item.Email</a></li>
+                                <li><i class="far fa-clock"></i> @item.OpenTime</li>
+                            </ul>
+
+                        }
+
+                    </div> <!-- footer contact -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="footer-link-wrapper d-flex flex-wrap justify-content-between">
+                        <div class="footer-link mt-50">
+                            <h4 class="footer-title">Information</h4>
+                            @foreach (var item in Model.Informations)
+                            {
+                                <ul class="link">
+                                    <li><a href="#">@item.Name</a></li>
+                                </ul>
+
+                            }
+
+                        </div> <!-- footer link -->
+                        <div class="footer-link mt-50">
+                            <h4 class="footer-title">Customer</h4>
+                            @foreach (var item in Model.Customers)
+                            {
+                                <ul class="link">
+                                    <li><a href="shop-4-column.html">@item.Name</a></li>
+
+                                </ul>
+
+                            }
+
+
+                        </div> <!-- footer link -->
+                        <div class="footer-link mt-50">
+                            <h4 class="footer-title">About Us</h4>
+
+                            @foreach (var item in Model.AboutUses)
+                            {
+                                <ul class="link">
+                                    <li><a href="#">@item.Name</a></li>
+
+                                </ul>
+
+                            }
+                        </div> <!-- footer link -->
+                        <div class="footer-link mt-50">
+                            <h4 class="footer-title">My account</h4>
+
+                            @foreach (var item in Model.MyAccounts)
+                            {
+                                <ul class="link">
+                                    <li><a href="#">@item.Name</a></li>
+
+                                </ul>
+
+                            }
+                        </div> <!-- footer link -->
+                    </div> <!-- footer link wrapper -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- footer widget -->
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="footer-copyright-payment text-center d-lg-flex justify-content-between align-items-center">
+                <div class="copyright-text">
+                    <p>Copyright 2020 &copy; <a href="@Model.CoprightLink">@Model.Copyright</a> . All Rights Reserved</p>
+                </div>
+                <div class="payment">
+                    <img src="~/@Model.PaymentMethod" alt="payment">
+                </div>
+            </div> <!-- footer copyright payment -->
+        </div> <!-- container -->
+    </div> <!-- footer copyright -->
+</section>
+
+<!--====== Footer Part Ends ======-->

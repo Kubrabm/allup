@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\AdminPanel\Data\" />
+    <Folder Include="Areas\AdminPanel\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admin\css\maps\style.css.map" />
+    <None Include="wwwroot\admin\fonts\.DS_Store" />
+    <None Include="wwwroot\admin\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\admin\fonts\Roboto\Roboto-Black.woff2" />
+    <None Include="wwwroot\admin\fonts\Roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\admin\fonts\Roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\admin\fonts\Roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\admin\fonts\Roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\admin\images\.DS_Store" />
+    <None Include="wwwroot\admin\images\auth\.DS_Store" />
+    <None Include="wwwroot\admin\images\faces\.DS_Store" />
+    <None Include="wwwroot\admin\images\logo-mini.svg" />
+    <None Include="wwwroot\admin\images\logo.svg" />
+    <None Include="wwwroot\admin\js\.DS_Store" />
+    <None Include="wwwroot\admin\js\chart.js" />
+    <None Include="wwwroot\admin\js\Chart.min.js" />
+    <None Include="wwwroot\admin\js\dashboard.js" />
+    <None Include="wwwroot\admin\js\data-table.js" />
+    <None Include="wwwroot\admin\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\admin\js\documentation.js" />
+    <None Include="wwwroot\admin\js\file-upload.js" />
+    <None Include="wwwroot\admin\js\hoverable-collapse.js" />
+    <None Include="wwwroot\admin\js\jquery.cookie.js" />
+    <None Include="wwwroot\admin\js\jquery.dataTables.js" />
+    <None Include="wwwroot\admin\js\off-canvas.js" />
+    <None Include="wwwroot\admin\js\tabs.js" />
+    <None Include="wwwroot\admin\js\template.js" />
+    <None Include="wwwroot\admin\vendors\.DS_Store" />
+    <None Include="wwwroot\admin\vendors\base\bootstrap.min.js.map" />
+    <None Include="wwwroot\admin\vendors\base\vendor.bundle.base.js" />
+    <None Include="wwwroot\admin\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\admin\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\admin\vendors\datatables.net\jquery.dataTables.js" />
+    <None Include="wwwroot\admin\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\assets\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-light-300.svg" />
+    <None Include="wwwroot\assets\fonts\fa-light-300.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\assets\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\assets\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\assets\fonts\ionicons28b5.svg" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\js\map-script.js" />
+    <None Include="wwwroot\assets\js\plugins\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\plugins\jquery-ui.min.js" />
+    <None Include="wwwroot\assets\js\plugins\jquery.countdown.min.js" />
+    <None Include="wwwroot\assets\js\plugins\popper.min.js" />
+    <None Include="wwwroot\assets\js\plugins\slick.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-1.12.4.min.js" />
+    <None Include="wwwroot\assets\js\vendor\modernizr-3.7.1.min.js" />
+    <None Include="wwwroot\assets\plugins\js\ajax-contact.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+</Project>
